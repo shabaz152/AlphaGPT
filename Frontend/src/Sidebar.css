@@ -1,0 +1,131 @@
+.sidebar{
+    width:280px;
+    height:100vh;
+    background:#171717;
+    display:flex;
+    flex-direction:column;
+    /* overflow-y:auto; */
+}
+
+button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: solid rgba(255, 255, 255, 0.5);
+    cursor:pointer;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+button span{
+    font-size: 25px;
+    margin-left: 150px;
+    /* margin-bottom: 10px; */
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+    opacity:0.9;    
+}
+.history{
+    flex:1;
+    overflow-y:auto;
+    margin:0;
+    padding:1px;
+    list-style:none;
+}
+.history li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border-radius: rgba(180,180,180,0.1);
+    background-color: #b4b4b4;
+}
+
+.history li p{
+    margin: 0;
+    flex: 1;
+}
+
+/* .history li{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+}
+
+.history li:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+    opacity:0.9;    
+} */
+
+
+.sign{
+    padding: 15px;
+    border-top: 1px solid #333;
+    text-align: center;
+    color: white;
+    background: #171717;
+    flex-shrink: 0;
+}
+    /* margin: 10px;
+    font-size: 16px;
+    text-align: center;
+    border-top:solid 0.25px rgba(255, 255, 255, 0.5);
+    flex-shrink:0;
+    padding:20px; */
+
+
+
+.fa-delete-left{
+    margin-left: auto;   /* Instead of 90px */
+    cursor: pointer;
+    color: white;
+    opacity: 0;
+}
+
+.history li:hover .fa-delete-left{
+    opacity: 1;
+}
+
+.fa-delete-left:hover{
+    color:#f13737;
+}
+
+.highlighted{
+    background-color: rgba(180,180,180,0.05);
+    border-radius: 10px;
+    opacity: 20px;
+}
+
+.show-more-btn {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: #b3b3b3;
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+}
+
+.show-more-btn:hover {
+    color: white;
+}
