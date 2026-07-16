@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { MyContext } from "./MyContext";
-import Signup from "./Signup";
+import Signup from "./SignUp.jsx";
 import { GoogleLogin } from "@react-oauth/google";
 
 function Login() {
