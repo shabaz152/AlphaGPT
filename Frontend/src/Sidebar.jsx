@@ -25,7 +25,7 @@ function Sidebar() {
 
         try {
 
-            const response = await fetch("http://localhost:2000/api/thread", {
+            const response = await fetch("${import.meta.env.VITE_API_URL}/api/thread", {
 
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -73,7 +73,7 @@ function Sidebar() {
         try {
 
             const response = await fetch(
-                `http://localhost:2000/api/thread/${newThreadId}`,
+                `${import.meta.env.VITE_API_URL}/api/thread/${newThreadId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -100,7 +100,7 @@ function Sidebar() {
         try {
 
             const response = await fetch(
-                `http://localhost:2000/api/thread/${threadId}`,
+                `${import.meta.env.VITE_API_URL}/api/thread/${threadId}`,
                 {
                     method: "DELETE",
                     headers: {

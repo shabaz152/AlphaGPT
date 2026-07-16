@@ -45,7 +45,7 @@ function ChatWindow() {
 
         try {
             const response = await fetch(
-                "http://localhost:2000/api/chat",
+                `${import.meta.env.VITE_API_URL}/api/chat`,
                 options
             );
 
