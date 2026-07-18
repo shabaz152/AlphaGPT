@@ -100,8 +100,7 @@ function Sidebar() {
 
         try {
 
-            const response = await fetch(
-                `${import.meta.env.VITE_API_URL}/api/thread/${threadId}`,
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/thread/${threadId}`,
                 {
                     method: "DELETE",
                     headers: {
