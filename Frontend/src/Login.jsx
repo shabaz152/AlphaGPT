@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { MyContext } from "./MyContext";
 import Signup from "./SignUp.jsx";
-import { GoogleLogin } from "@react-oauth/google";
+// import { GoogleLogin } from "@react-oauth/google";
 
 function Login() {
 
@@ -57,44 +57,44 @@ function Login() {
         }
     };
 
-    const handleGoogleLogin = async (credentialResponse) => {
-        try {
+    // const handleGoogleLogin = async (credentialResponse) => {
+    //     try {
 
-            console.log(
-                "Google API URL:",
-                `${import.meta.env.VITE_API_URL}/api/auth/google`
-            );
+    //         console.log(
+    //             "Google API URL:",
+    //             `${import.meta.env.VITE_API_URL}/api/auth/google`
+    //         );
 
-            const response = await fetch(
-                `${import.meta.env.VITE_API_URL}/api/auth/google`,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        token: credentialResponse.credential,
-                    }),
-                }
-            );
+    //         const response = await fetch(
+    //             `${import.meta.env.VITE_API_URL}/api/auth/google`,
+    //             {
+    //                 method: "POST",
+    //                 headers: {
+    //                     "Content-Type": "application/json",
+    //                 },
+    //                 body: JSON.stringify({
+    //                     token: credentialResponse.credential,
+    //                 }),
+    //             }
+    //         );
 
-            const data = await response.json();
+    //         const data = await response.json();
 
-            if (!response.ok) {
-                setError(data.error);
-                return;
-            }
+    //         if (!response.ok) {
+    //             setError(data.error);
+    //             return;
+    //         }
 
-            localStorage.setItem("token", data.token);
-            localStorage.setItem("user", JSON.stringify(data.user));
+    //         localStorage.setItem("token", data.token);
+    //         localStorage.setItem("user", JSON.stringify(data.user));
 
-            setIsLoggedIn(true);
+    //         setIsLoggedIn(true);
 
-        } catch (error) {
-            console.error(error);
-            setError("Google login failed.");
-        }
-    };
+    //     } catch (error) {
+    //         console.error(error);
+    //         setError("Google login failed.");
+    //     }
+    // };
 
     return (
         <div className="login-container">
@@ -125,7 +125,7 @@ function Login() {
 
             </form>
 
-            <div
+            {/* <div
                 style={{
                     marginTop: "20px",
                     display: "flex",
@@ -138,7 +138,7 @@ function Login() {
                         setError("Google login failed.");
                     }}
                 />
-            </div>
+            </div> */}
 
             {error && (
                 <p
