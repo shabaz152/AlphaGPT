@@ -6,10 +6,9 @@ import chatRoutes from "./routes/chat.js";
 import authRoutes from "./routes/auth.js";
 
 const app = express();
-const PORT = process.env.PORT || 2000;
+const PORT = process.env.PORT;
 
 const allowedOrigins = [
-  "http://localhost:5173",
   "https://alphagpt1.netlify.app",
   "https://6a587e2a78f0547facf54871--alphagpt1.netlify.app"
 ];
