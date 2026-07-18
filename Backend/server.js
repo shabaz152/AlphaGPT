@@ -10,7 +10,7 @@ const PORT = process.env.PORT;
 
 const allowedOrigins = [
   "https://alphagpt1.netlify.app",
-  "https://6a587e2a78f0547facf54871--alphagpt1.netlify.app"
+  "https://main.dc5b4rjixbysv.amplifyapp.com"
 ];
 
 app.use(express.json());
