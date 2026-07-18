@@ -6,6 +6,12 @@ import { OAuth2Client } from "google-auth-library";
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 const router = express.Router();
+router.get("/test", (req, res) => {
+  res.json({
+    success: true,
+    message: "Auth Route Working",
+  });
+});
 
 // Signup
 router.post("/signup", async (req, res) => {
