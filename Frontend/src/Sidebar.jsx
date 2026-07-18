@@ -2,6 +2,7 @@ import "./Sidebar.css";
 import { useContext, useEffect, useState } from "react";
 import { MyContext } from "./MyContext.jsx";
 import { v1 as uuidv1 } from "uuid";
+import gptlogo from "./assets/gptlogo.jpeg";
 
 function Sidebar() {
 
@@ -150,9 +151,9 @@ function Sidebar() {
 
             <button onClick={createNewChat}>
                 <img
-                    src="src/assets/gptlogo.jpeg"
-                    alt="GPT Logo"
-                    className="logo"
+                 src={gptlogo}
+                 alt="GPT Logo"
+                 className="logo"
                 />
                 <span>
                     <i className="fa-regular fa-pen-to-square"></i>
